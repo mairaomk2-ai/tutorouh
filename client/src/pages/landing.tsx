@@ -78,13 +78,10 @@ export default function Landing() {
               <img src={logoPath} alt="Tutoro Logo" className="h-12 w-12 mr-3 rounded-lg hover-lift border-2 border-white/20 shadow-lg" />
               <span className="text-2xl font-bold text-black">Tutoro</span>
             </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 interactive-hover">Home</a>
-              <a href="#about" className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 interactive-hover">About</a>
-              <a href="#services" className="text-gray-700 hover:text-primary font-medium">Services</a>
-              <a href="#contact" className="text-gray-700 hover:text-primary font-medium">Contact</a>
+            <div className="flex items-center space-x-3">
+              <a href="mailto:Contact.tutoro@gmail.com" className="text-gray-800 hover:text-primary text-base font-medium transition-colors duration-200 interactive-hover touch-manipulation px-3 py-2 rounded-md hover:bg-gray-100">Contact</a>
               <Link href="/login">
-                <Button variant="outline" className="ml-4">Sign In</Button>
+                <Button variant="outline">Sign In</Button>
               </Link>
             </div>
           </div>
@@ -475,6 +472,29 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            Get in Touch
+          </h2>
+          <p className="text-xl text-gray-600 mb-12">
+            Have questions? We're here to help you find the perfect tutor.
+          </p>
+          <div className="bg-white rounded-xl shadow-lg p-8 max-w-md mx-auto">
+            <div className="flex items-center justify-center mb-4">
+              <MessageCircle className="w-8 h-8 text-primary mr-3" />
+              <h3 className="text-2xl font-semibold text-gray-900">Contact Us</h3>
+            </div>
+            <a 
+              href="mailto:Contact.tutoro@gmail.com" 
+              className="text-primary hover:text-primary/80 font-medium text-lg transition-colors duration-200 touch-manipulation inline-block py-2 px-4 rounded-lg hover:bg-primary/5"
+            >
+              Contact.tutoro@gmail.com
+            </a>
+          </div>
+        </div>
+      </section>
 
     </div>
   );
