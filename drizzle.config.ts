@@ -8,6 +8,8 @@ export default defineConfig({
   out: "./migrations",
   schema: "./shared/schema.ts",
   dialect: "postgresql",
+  strict: false, // Disable confirmation prompts for non-interactive use
+  verbose: true, // Show SQL statements
   dbCredentials: {
     url: process.env.DATABASE_URL,
   },
